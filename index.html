@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>L Y D Asociados</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e6f0fa; /* azul claro */
+      color: #003366;
+      scroll-behavior: smooth;
+    }
+
+    /* Menú */
+    nav {
+      background-color: #0055A4;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Líneas divisorias */
+    .divider {
+      border: none;
+      height: 10px; 
+      background-color: #0055A4;
+      margin: 60px auto;
+      width: 95%;
+    }
+
+    header {
+      background: linear-gradient(to right, #0055A4, #66B2FF);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3.5em;
+      margin: 0;
+    }
+
+    section {
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      font-size: 2.5em;
+      color: #0055A4;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .about p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 1.3em;
+      line-height: 1.6;
+    }
+
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .service-card {
+      width: 300px;
+      height: 220px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      font-size: 1.3em;
+      font-weight: bold;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+    }
+
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    .service-desc {
+      position: absolute;
+      bottom: -100%;
+      left: 0;
+      width: 100%;
+      background-color: rgba(0, 85, 164, 0.95);
+      color: white;
+      padding: 15px;
+      font-size: 1em;
+      transition: bottom 0.3s ease;
+      text-shadow: none;
+    }
+
+    .service-card:hover .service-desc {
+      bottom: 0;
+    }
+
+    .project-item {
+      margin-bottom: 20px;
+      padding: 10px;
+      border-left: 10px solid #66B2FF;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      max-width: 1300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .portfolio-images {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .portfolio-images img {
+      width: 300px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .team-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .team-member {
+      flex: 1 1 300px;
+      max-width: 300px;
+      text-align: center;
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .team-member img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #0055A4;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .image {
+      width: 100%;
+      max-width: 700px;
+      height: auto;
+      margin: 20px auto;
+      display: block;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#quienes">¿Quiénes Somos?</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#trabajos">Trabajos Realizados</a>
+    <a href="#equipo">Nuestro Equipo</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+
+  <header>
+    <h1>L Y D ASOCIADOS</h1>
+    <p>"Más que números: soluciones contables confiables"</p>
+  </header>
+
+  <section id="quienes" class="about">
+    <h2 class="section-title">¿Quiénes Somos?</h2>
+    <p>Somos una firma comprometida con ofrecer soluciones integrales en gestión administrativa, contable y legal para empresas de todos los tamaños. Nuestro equipo está compuesto por profesionales con amplia experiencia en cumplimiento laboral y fiscal.
+      En L Y D ASOCIADOS contamos con amplia experiencia brindando soluciones contables y administrativas a empresas y emprendedores. Nos especializamos en la presentación de planillas, declaraciones de renta, elaboración de estados financieros, afiliaciones y retiros en SIPE, 
+      cálculo de planilla regular y de horas extras, así como liquidaciones laborales. 
+      Además, ofrecemos servicios de redacción de contratos y cartas de despido conforme a los lineamientos de Mitradel.</p>
+    <img class="image" src="imagenes/LOGOpng.png" alt="Personal de oficina trabajando">
+  </section>
+
+  <hr class="divider" />
+
+  <section class="services">
+    <h2 class="section-title">Servicios</h2>
+    <div class="services-container">
+      <div class="service-card" style="background-image: url('imagenes/planilla.jpg');">
+        Presentación de planilla
+        <div class="service-desc">Gestión precisa y puntual de planillas mensuales o anuales para su empresa.</div>
+      </div>
+      <div class="service-card" style="background-image: url('imagenes/Declaracion.jpeg');">
+        Declaraciones de renta
+        <div class="service-desc">Preparación profesional de sus impuestos conforme a la ley.</div>
+      </div>
+      <div class="service-card" style="background-image: url('imagenes/estadospng.png');">
+        Estados financieros
+        <div class="service-desc">Elaboración de reportes financieros claros y confiables.</div>
+      </div>
+      <div class="service-card" style="background-image: url('imagenes/SIPE.jpeg');">
+        Preelaborada en SIPE
+        <div class="service-desc">Carga y gestión de planillas mediante la plataforma SIPE.</div>
+      </div>
+      <div class="service-card" style="background-image: url('imagenes/Afiliacionjpg.jpg');">
+        Afiliación, inscripción y retiro
+        <div class="service-desc">Altas, bajas y modificaciones de personal ante la CSS y Mitradel.</div>
+      </div>
+      <div class="service-card" style="background-image: url('imagenes/pr.jpeg');">
+        Planilla regular y horas extras
+        <div class="service-desc">Cálculo justo del salario regular y horas extraordinarias.</div>
+      </div>
+      <div class="service-card" style="background-image: url('imagenes/liquidacion.jpeg');">
+        Liquidaciones
+        <div class="service-desc">Cálculo de prestaciones conforme al Código de Trabajo.</div>
+      </div>
+      <div class="service-card" style="background-image: url('imagenes/contratojpeg.jpeg');">
+        Contratos y cartas de despido
+        <div class="service-desc">Redacción legal según los estatutos del MITRADEL.</div>
+      </div>
+    </div>
+  </section>
+
+    
+
+  <hr class="divider" />
+
+  <section id="trabajos" class="portfolio">
+    <h2 class="section-title">Trabajos Realizados</h2>
+    <div class="project-item">Ricardo Perez S.A - Gestión de planilla y declaraciones fiscales</div>
+    <div class="project-item">Econoutiles - Implementación de estados financieros anuales</div>
+    <div class="project-item">First Quantum - Asesoría y redacción de contratos conforme MITRADEL</div>
+    <div class="portfolio-images">
+      <img src="imagenes/RicardoP.jpeg" alt="Trabajo realizado">
+      <img src="imagenes/Econo.jpeg" alt="Trabajo realizado">
+      <img src="imagenes/FQ.jpeg" alt="Trabajo realizado">
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <section id="equipo" class="team">
+    <h2 class="section-title">Nuestro Equipo</h2>
+    <div class="team-container">
+      <div class="team-member">
+        <img src="imagenes/LOU.png" alt="Foto del miembro del equipo">
+        <h3>Licda. Lourdes Vásquez</h3>
+        <p>Contadora Pública Autorizada Licencia 0388-201</p>
+        <p>Email: lourdesvasquezf@yahoo.com</p>
+        <p>Contacto: 6802-7515</p>
+      </div>
+      <div class="team-member">
+        <img src="imagenes/comadre.png" alt="Foto del miembro del equipo">
+        <h3>Licda. Diana E. Poveda</h3>
+        <p>Contadora Pública Autorizada Licencia 0097-2010</p>
+        <p>Contacto: 6907-6183</p>
+      </div>
+    </div>
+  </section>
+
+  <hr class="divider" />
+
+  <footer id="contacto">
+    <p>&copy; 2025 L Y D Asociados - Todos los derechos reservados</p>
+    <p>Urb, Blas Tello  
+      Chitré, Herrera, Rep. de Panamá  
+      Celular: 6907-6183</p>
+  </footer>
+
+</body>
+</html>
