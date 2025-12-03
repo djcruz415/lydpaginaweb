@@ -1,2 +1,0 @@
-# lydpaginaweb
-pagina web 
